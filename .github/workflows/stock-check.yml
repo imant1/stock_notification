@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: 🚨 Run stock checker
-        run: node dist/index.js
+        run: npm start
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
