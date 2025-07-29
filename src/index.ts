@@ -15,12 +15,13 @@ async function checkStock() {
     const inStock = response.data?.some(item => item.IsAvailable);
 
     if (inStock) {
-      await sendTelegramMessage("🚨 Product is now in stock!");
+      await sendTelegramMessage("🚨 Product is now in stock");
     } else {
       console.log("❌ Still out of stock.");
     }
   } catch (error) {
     console.error("Error checking stock:", (error as Error).message);
+		await sendTelegramMessage("Error checking stock");
   }
 }
 
