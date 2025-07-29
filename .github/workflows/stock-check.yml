@@ -2,7 +2,7 @@ name: Check Product Stock
 
 on:
   schedule:
-    - cron: "2 9,15,20 * * *" 
+    - cron: "2 13,19,23 * * *" 
   workflow_dispatch:        # Allow manual run
 
 jobs:
